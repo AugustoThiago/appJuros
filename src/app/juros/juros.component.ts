@@ -9,24 +9,27 @@ export class JurosComponent implements OnInit {
   vp: number;
   j:  number;
   n:  number;
+  js: number;
   jc: number;
-  list;
+  
+  juro;
 
   constructor() {
-    this.vp = 100;
-    this.j = 2.5;
-    this.n = 3;
+    this.vp = 0;
+    this.j = 0;
+    this.n = 0;
   }
 
   ngOnInit() {
   }
   
 getJurosSimples(){
-  return this.vp*(1+this.j/100*this.n)
+  this.js = this.vp*(1+this.j/100*this.n);
+  return this.js.toFixed(2)
 }
 
 getJurosCompostos(){
-  this.jc = this.vp*(1+this.j/100*this.n)
-  return Math.pow(this.jc,this.n).toFixed(2);
-}
+    this.jc = this.vp*Math.pow(1+this.j/100*this.n,this.n);
+    return this.jc.toFixed(2)
+   }
 }
