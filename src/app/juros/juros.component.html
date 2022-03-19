@@ -15,7 +15,7 @@
 <h2>Juros Compostos</h2>
 
 <table class="table">
-  <tr>
+  <tr *ngForOf="let tx of juro, index as n">
     <th>Valor Presente</th>
     <th>Taxa de Juros</th>
     <th>Período</th>

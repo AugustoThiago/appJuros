@@ -6,13 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./juros.component.css'],
 })
 export class JurosComponent implements OnInit {
-  vp: number;
-  j: number;
-  n: number;
-  js: number;
-  jc: number;
-
-  juro;
+  vp; j; n; js; jc: number;
 
   constructor() {
     this.vp = 0;
