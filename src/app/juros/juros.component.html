@@ -6,9 +6,24 @@
 <input type="numer" step="0.01" [(ngModel)]="j">
 <br>
 <div>Período <em>(em meses)</em></div> 
-<input type="numer" step="0.01" [(ngModel)]="j">
+<input type="numer" step="0.01" [(ngModel)]="n">
 
 <div>Valor Futuro</div>
 <h4>R$ {{getJurosSimples()}}</h4>
 
+<hr>
 <h4>R$ {{getJurosCompostos()}}</h4>
+
+<h2>Lista</h2>
+<table class="table">
+  <tr>
+    <th>Valor Presente</th>
+    <th>Taxa de Juros</th>
+    <th>Período</th>
+  </tr>
+  <tr>
+    <td>{{vp}}</td>
+    <td>{{j}}</td>
+    <td>{{n}}</td>
+  </tr>
+</table>
