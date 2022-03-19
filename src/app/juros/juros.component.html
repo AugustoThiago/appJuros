@@ -1,5 +1,4 @@
-<h2>Calculadora de Juros</h2>
-
+<h2>Juros Simples</h2>
 <div>Valor Presente</div>
 <input type="numer" step="0.01" [(ngModel)]="vp">
 <br>
@@ -8,6 +7,8 @@
 <br>
 <div>Período <em>(em meses)</em></div> 
 <input type="numer" step="0.01" [(ngModel)]="j">
-<hr>
-<h4>Valor Futuro</h4>
-<h4>{{getJurosSimples()}}</h4>
+
+<div>Valor Futuro</div>
+<h4>R$ {{getJurosSimples()}}</h4>
+
+<h4>R$ {{getJurosCompostos()}}</h4>

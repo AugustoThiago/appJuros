@@ -9,6 +9,7 @@ export class JurosComponent implements OnInit {
   vp: number;
   j:  number;
   n:  number;
+  jc: number;
 
   constructor() {
     this.vp = 100;
@@ -23,4 +24,8 @@ getJurosSimples(){
   return this.vp*(1+this.j/100*this.n)
 }
 
+getJurosCompostos(){
+  this.jc = this.vp*(1+this.j/100*this.n)
+  return Math.pow(this.jc,this.n).toFixed(2);
+}
 }
