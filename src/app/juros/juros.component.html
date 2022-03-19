@@ -9,18 +9,18 @@
 <input type="number" step="1" [(ngModel)]="n" />
 
 <div>Valor Futuro</div>
-<h4>Total: R$ {{ getJurosSimples()}}</h4>
+<h4>Total: R$ {{ getJurosSimples() }}</h4>
 
 <hr />
 <h2>Juros Compostos</h2>
 
 <table class="table">
-  <tr *ngForOf="let tx of juro, index as n">
+  <tr>
     <th>Valor Presente</th>
     <th>Taxa de Juros</th>
     <th>Período</th>
   </tr>
-  <tr>
+  <tr *ngFor="">
     <td>{{ vp }}</td>
     <td>{{ j }}</td>
     <td>{{ n }}</td>
