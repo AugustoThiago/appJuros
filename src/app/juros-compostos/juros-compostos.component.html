@@ -1,0 +1,23 @@
+<h2>Juros Compostos</h2>
+<div>Valor Presente</div>
+<input type="number" step="0.01" [(ngModel)]="cvp" />
+
+<div>Juros <em>(em %)</em></div>
+<input type="number" step="0.01" [(ngModel)]="cj" />
+
+<div>Período <em>(em meses)</em></div>
+<input type="number" step="1" [(ngModel)]="cn" />
+
+<table class="table">
+  <tr>
+    <th>Valor Presente</th>
+    <th>Taxa de Juros</th>
+    <th>Período</th>
+  </tr>
+  <tr *ngFor="">
+    <td>{{ cvp }}</td>
+    <td>{{ cj }}</td>
+    <td>{{ cn }}</td>
+  </tr>
+</table>
+<h4>Total: R$ {{ getJurosCompostos() }}</h4>
