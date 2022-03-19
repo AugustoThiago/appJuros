@@ -14,10 +14,10 @@
     <th>Taxa de Juros</th>
     <th>Período</th>
   </tr>
-  <tr *ngFor="let item of cvp, index as cn">
-    <td>{{cvp }}</td>
-    <td>{{ cj }}</td>
-    <td>{{ cn }}</td>
+  <tr *ngFor="let item of cvp; index as cn">
+    <td>{{ item.cvp }}</td>
+    <td>{{ item.cj }}</td>
+    <td>{{ item.cn }}</td>
   </tr>
 </table>
 <h4>Total: R$ {{ getJurosCompostos() }}</h4>
